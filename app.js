@@ -136,16 +136,18 @@
   links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => links.classList.remove("open")));
   // scrollspy: About/Skills share a row, so track all visible sections and light the first (or the one you clicked)
   const visible = new Set(); let pinned = null;
+  const atBottom = () => innerHeight + scrollY >= document.documentElement.scrollHeight - 2;
   const setActive = (id) => links.querySelectorAll("a").forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + id));
   const spy = new IntersectionObserver((es) => {
     es.forEach((e) => e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id));
     if (pinned && !visible.has(pinned)) pinned = null;
+    if (atBottom()) return setActive(secs[secs.length - 1].id);
     const first = [...secs].map((s) => s.id).find((id) => visible.has(id));
     if (pinned || first) setActive(pinned || first);
   }, { rootMargin: "-40% 0px -55% 0px" });
   const secs = document.querySelectorAll("main section[id]"); secs.forEach((s) => spy.observe(s));
   links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { pinned = a.getAttribute("href").slice(1); setActive(pinned); }));
-  addEventListener("scroll", () => { if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) { pinned = null; setActive(secs[secs.length - 1].id); } }, { passive: true });
+  addEventListener("scroll", () => { if (atBottom()) { pinned = null; setActive(secs[secs.length - 1].id); } }, { passive: true });
 
   // ---------- scroll progress / font-ready fade ----------
   const bar = $("#progress");
