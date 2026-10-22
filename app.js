@@ -62,7 +62,7 @@
     card.style.setProperty("--i", i);
     card.innerHTML = `
       <button class="thumb" aria-label="Play ${p.title}">
-        <img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+        <img src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=()=>this.style.visibility='hidden';this.src='https://i.ytimg.com/vi/${id}/hqdefault.jpg'">
         <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
         ${p.note ? `<span class="badge">${p.note}</span>` : ""}
       </button>
@@ -86,11 +86,11 @@
   // ---------- video modal ----------
   const modal = $("#modal"), frame = $("#modalFrame");
   function openVideo(id, title) {
-    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="${title}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-    $("#modalTitle").textContent = title; modal.hidden = false; document.body.style.overflow = "hidden";
+    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&vq=hd1080" title="${title}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    $("#modalTitle").textContent = title; modal.hidden = false; document.body.style.overflow = "hidden"; document.body.classList.add("video-open");
     $(".modal-close").focus();
   }
-  function closeVideo() { modal.hidden = true; frame.innerHTML = ""; document.body.style.overflow = ""; }
+  function closeVideo() { modal.hidden = true; frame.innerHTML = ""; document.body.style.overflow = ""; document.body.classList.remove("video-open"); }
   modal.querySelectorAll("[data-close]").forEach((n) => n.addEventListener("click", closeVideo));
   addEventListener("keydown", (e) => e.key === "Escape" && !modal.hidden && closeVideo());
 
