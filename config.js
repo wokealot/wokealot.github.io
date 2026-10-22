@@ -23,7 +23,7 @@ window.SITE_CONFIG = {
   // Stats shown in About. Keep these honest — "projects" is counted from the list below automatically.
   stats: [
     { value: "1+", label: "Year Experience" },
-    { value: "auto", label: "Public Demos" },   // "auto" = number of projects
+    { value: "auto", label: "Showcases" },      // "auto" = number of projects
   ],
 
   skills: [
