@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "12",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792696845",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -67,7 +67,7 @@ window.SITE_CONFIG = {
   images: {
     hero:     { src: "assets/hero-ink.svg",         opacity: 1,   parallax: 0.05 }, // right side of hero
     heroFigure:     { src: "assets/hero-figure.png",     opacity: 1,   parallax: 0.03, size: "contain", position: "right bottom" }, // characters sit over the ink layers
-    aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
+    aboutFigure:    { src: "assets/about-figure.png",    opacity: 1,   parallax: 0.03, size: "contain", position: "center bottom" },
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right center" },
     contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" }, // Naruto
     projectsFigureB:{ src: "assets/projects-figure-b.png", opacity: .85, parallax: 0.02, size: "contain", position: "right bottom" }, // right side of Projects

@@ -27,7 +27,7 @@ Open `config.js`. Every text, link, project, image and color is there.
 
 `assets/*.svg` are original ink/manga layers (slash, lightning, halftone, brush strokes, torii) — vector, so they're sharp at any size.
 Want character art instead? Drop a PNG in `assets/` and point `images.hero.src` (etc.) at it; the masks and parallax apply to any image.
-After changing assets, bump `version` in `config.js` so visitors' browsers refetch them.
+Deploy with `./deploy.sh` and caches take care of themselves.
 
 ## Run locally
 
@@ -35,6 +35,11 @@ Any static server, e.g. `python3 -m http.server 8000` → http://localhost:8000
 (Opening `index.html` directly also works, except YouTube embeds need http.)
 
 ## Deploy to GitHub Pages
+
+Every push: run `./deploy.sh "what changed"` — it stamps all file links so visitors never see a cached old version, then commits and pushes.
+If you edit by hand instead, bump `version` in `config.js` AND the `?v=` numbers in `index.html` together.
+
+First-time setup:
 
 1. Put these files at the root of the `wokealot/wokealot.github.io` repo (`index.html` must be at root).
 2. Commit + push to `main`.
