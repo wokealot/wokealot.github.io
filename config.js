@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792699189",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792708224",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
