@@ -21,7 +21,7 @@ Open `config.js`. Every text, link, project, image and color is there.
 - **Stats:** `"auto"` = number of projects. Don't claim what you haven't done.
 - **Images:** drop files in `assets/` and point `images.*.src` at them. `opacity` 0–1, `parallax` 0–0.1.
   Set `src: ""` to remove a layer. The five character layers are: hero (right side), about, skills, projects (left), contact (right).
-- **Commissions:** the `commissions` block — what you take, pricing lines, payment methods, steps.
+- **Payment line:** `paymentLine` shows under Contact; set "" to hide.
 - **Reviews:** add entries to `reviews` (section appears automatically); paste a Tally/Google Form link in `reviewFormUrl` for a "Leave a review" button.
 - **Colors / animations:** `colors` and `animations` at the bottom. Reduced-motion OS setting is always respected.
 

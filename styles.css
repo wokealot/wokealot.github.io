@@ -149,21 +149,9 @@ body.ready .hero-name::after { opacity: .55; transform: none; }
 .card-meta span { color: var(--muted); letter-spacing: .08em; font-size: 10px; }
 .card.reveal { transition-delay: calc(var(--i) * 60ms); }
 
-/* ---------- commissions / reviews ---------- */
-.commissions, .reviews { padding: 36px 160px 44px 100px; }
-.comm-intro { max-width: 620px; margin-bottom: 26px; color: var(--text); }
-.comm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 28px; }
-.comm-col h3 { font: 500 11px var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
-.comm-col ul li { padding: 5px 0 5px 16px; position: relative; font-size: 15px; }
-.comm-col ul li::before { content: ""; position: absolute; left: 0; top: 14px; width: 6px; height: 1px; background: var(--accent); }
-.methods { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
-.chip-static { border: 1px solid var(--line); color: var(--text); cursor: default; letter-spacing: .08em; font-size: 10px; }
-.steps { counter-reset: s; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 6px 0; }
-.steps li::before { content: counter(s, decimal-leading-zero); font: 500 11px var(--sans); color: var(--accent); letter-spacing: .1em; padding-top: 4px; }
-.steps li strong { display: block; font: 500 15px var(--serif); }
-.steps li span { display: block; grid-column: 2; font-size: 13px; color: var(--muted); line-height: 1.5; }
-.side-note-commissions, .side-note-reviews { right: 48px; top: 36px; }
+/* ---------- reviews ---------- */
+.reviews { padding: 36px 160px 44px 100px; }
+.side-note-reviews { right: 48px; top: 36px; }
 .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .review { padding: 18px 20px; border: 1px solid var(--line); background: rgba(20,20,23,.85); }
 .review .stars { color: var(--accent); letter-spacing: .15em; margin-bottom: 10px; font-size: 13px; }
@@ -174,7 +162,9 @@ body.ready .hero-name::after { opacity: .55; transform: none; }
 /* ---------- contact ---------- */
 .contact { padding: 36px 360px 44px 100px; min-height: 360px; }
 .contact-body h3 { font: 500 20px var(--serif); margin-bottom: 4px; }
-.contact-body .muted { font-size: 13px; margin-bottom: 18px; }
+.contact-body .muted { font-size: 13px; margin-bottom: 6px; }
+.pay-line { font: 500 10px var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.pay-line:empty { display: none; }
 .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 .social-card { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); background: rgba(20,20,23,.85); text-align: left; transition: border-color .35s, transform .35s var(--ease), background .35s; }
 .social-card:hover { border-color: rgba(255,255,255,.3); transform: translateY(-3px); background: rgba(28,28,32,.95); }
@@ -228,8 +218,8 @@ body.video-open .texture, body.video-open .art { display: none; } /* nothing com
   .about { padding-right: 24px; }
   .projects { padding-left: 24px; padding-right: 24px; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact, .commissions, .reviews { padding: 32px 24px; }
-  .comm-grid, .review-grid { grid-template-columns: 1fr; gap: 22px; }
+  .contact, .reviews { padding: 32px 24px; }
+  .review-grid { grid-template-columns: 1fr; gap: 22px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .section-head { flex-wrap: wrap; }
   .filters { width: 100%; order: 3; flex-wrap: wrap; }

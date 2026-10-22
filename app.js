@@ -103,14 +103,6 @@
   modal.querySelectorAll("[data-close]").forEach((n) => n.addEventListener("click", closeVideo));
   addEventListener("keydown", (e) => e.key === "Escape" && !modal.hidden && closeVideo());
 
-  // ---------- commissions ----------
-  const K = C.commissions || {};
-  $("[data-cfg-path='commissions.intro']").textContent = K.intro || "";
-  (K.takes || []).forEach((t) => $("#commTakes").append(el("li", null, t)));
-  (K.pricing || []).forEach((t) => $("#commPricing").append(el("li", null, t)));
-  (K.methods || []).forEach((t) => $("#commMethods").append(el("span", "chip chip-static", t)));
-  (K.steps || []).forEach((s) => $("#commSteps").append(el("li", null, `<strong>${s.t}</strong><span>${s.d}</span>`)));
-
   // ---------- reviews ----------
   if ((C.reviews || []).length) {
     $("#reviews").hidden = false;
@@ -123,6 +115,7 @@
 
   // ---------- contact ----------
   $("#contactLine").textContent = (C.commissionsOpen ? "Open for commissions. " : "") + "Feel free to reach out through any of my socials.";
+  $("#payLine").textContent = C.paymentLine || "";
   const toast = $("#toast");
   C.socials.forEach((s) => {
     const a = el(s.copy ? "button" : "a", "social-card" + (C.brandColors ? " brand-" + s.id : ""), `<span class="social-icon">${ICONS[s.id]}</span><span class="social-text"><strong>${s.label}</strong><small>${s.sub}</small></span><span class="arrow">→</span>`);
