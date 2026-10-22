@@ -149,16 +149,6 @@ body.ready .hero-name::after { opacity: .55; transform: none; }
 .card-meta span { color: var(--muted); letter-spacing: .08em; font-size: 10px; }
 .card.reveal { transition-delay: calc(var(--i) * 60ms); }
 
-/* ---------- reviews ---------- */
-.reviews { padding: 36px 160px 44px 100px; }
-.side-note-reviews { right: 48px; top: 36px; }
-.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.review { padding: 18px 20px; border: 1px solid var(--line); background: rgba(20,20,23,.85); }
-.review .stars { color: var(--accent); letter-spacing: .15em; margin-bottom: 10px; font-size: 13px; }
-.review p { font-size: 15px; line-height: 1.5; margin-bottom: 14px; }
-.review footer { font: 500 11px var(--sans); letter-spacing: .08em; color: var(--muted); }
-.review footer strong { color: var(--text); font-weight: 500; }
-
 /* ---------- contact ---------- */
 .contact { padding: 36px 360px 44px 100px; min-height: 360px; }
 .contact-body h3 { font: 500 20px var(--serif); margin-bottom: 4px; }
@@ -218,8 +208,7 @@ body.video-open .texture, body.video-open .art { display: none; } /* nothing com
   .about { padding-right: 24px; }
   .projects { padding-left: 24px; padding-right: 24px; }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact, .reviews { padding: 32px 24px; }
-  .review-grid { grid-template-columns: 1fr; gap: 22px; }
+  .contact { padding: 32px 24px; }
   .social-grid { grid-template-columns: repeat(2, 1fr); }
   .section-head { flex-wrap: wrap; }
   .filters { width: 100%; order: 3; flex-wrap: wrap; }

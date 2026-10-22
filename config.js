@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792708594",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792708622",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -52,10 +52,6 @@ window.SITE_CONFIG = {
     { title: "Slot Selection",                 youtube: "https://youtu.be/7K9BTRlawbs", category: "UI" },
   ],
 
-  // Reviews from real clients. Section is hidden until this has at least one entry.
-  // Add one: { name: "Client", handle: "@discord", project: "Combat system", stars: 5, text: "…", date: "Oct 2026" }
-  reviews: [],
-  reviewFormUrl: "",   // paste a Tally/Google Form link here to show a "Leave a review" button
 
   paymentLine: "USD preferred · Robux accepted · Upfront or 50/50 · PayPal, Cash App, Venmo, Roblox group funds or gamepass",   // one line under Contact; "" hides it
   contactLine: "Discord is the fastest way to reach me — I'm on there most of the day.",
@@ -96,7 +92,6 @@ window.SITE_CONFIG = {
     projects: { vertical: "限界はない。", list: [] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
     contact:  { vertical: "", list: [] },   // corner is taken by the character
-    reviews:  { vertical: "信頼。", list: [] },
   },
 
   colors: {
