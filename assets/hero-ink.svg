@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640">
+<defs>
+ <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency=".014" numOctaves="4" seed="7"/><feDisplacementMap in="SourceGraphic" scale="60"/></filter>
+ <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="3" seed="3"/><feDisplacementMap in="SourceGraphic" scale="8"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .16 0"/></filter>
+ <pattern id="tone" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><circle cx="2.5" cy="2.5" r="1.1" fill="#fff"/></pattern>
+ <radialGradient id="fade" cx="60%" cy="45%" r="55%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+ <mask id="m"><rect width="1200" height="640" fill="url(#fade)"/></mask>
+ <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".35" stop-color="#fff" stop-opacity=".95"/><stop offset=".6" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<!-- ambient -->
+<ellipse cx="720" cy="300" rx="420" ry="260" fill="#fff" fill-opacity=".07" filter="url(#soft)"/>
+<rect width="1200" height="640" fill="url(#tone)" opacity=".22" mask="url(#m)"/>
+<!-- speed lines radiating from the slash -->
+<g stroke="#fff" stroke-opacity=".13" stroke-width="1" stroke-linecap="round">
+ <path d="M1200 20 L700 330"/><path d="M1200 90 L720 340"/><path d="M1200 170 L740 350"/><path d="M1180 640 L720 360"/><path d="M1060 640 L700 370"/><path d="M940 640 L690 380"/><path d="M1200 290 L760 350"/><path d="M1200 460 L750 365"/>
+ <path d="M300 640 L690 380" stroke-opacity=".07"/><path d="M420 0 L690 320" stroke-opacity=".07"/>
+</g>
+<!-- ink mass, low-key -->
+<g filter="url(#ink)">
+ <ellipse cx="720" cy="330" rx="300" ry="180" fill="#dcd9d2" fill-opacity=".22"/>
+ <ellipse cx="560" cy="420" rx="110" ry="60" fill="#dcd9d2" fill-opacity=".16"/>
+ <circle cx="1000" cy="200" r="38" fill="#dcd9d2" fill-opacity=".2"/><circle cx="440" cy="240" r="16" fill="#dcd9d2" fill-opacity=".25"/><circle cx="1060" cy="470" r="12" fill="#dcd9d2" fill-opacity=".25"/><circle cx="380" cy="420" r="7" fill="#dcd9d2" fill-opacity=".3"/>
+</g>
+<!-- big faded kanji -->
+<text x="700" y="470" font-family="Shippori Mincho, serif" font-size="360" fill="#fff" fill-opacity=".06" text-anchor="middle">斬</text>
+<!-- the slash: katana arc with glint -->
+<g filter="url(#rough)">
+ <path d="M300 520 C560 300 820 150 1180 40 L1186 56 C830 190 580 340 318 540z" fill="url(#blade)"/>
+ <path d="M300 520 C560 300 820 150 1180 40" fill="none" stroke="#fff" stroke-width="1.2" stroke-opacity=".9"/>
+ <path d="M300 520 C560 300 820 150 1180 40" fill="none" stroke="#fff" stroke-width="10" stroke-opacity=".12" filter="url(#soft)"/>
+</g>
+<!-- crimson spatter along the cut -->
+<g fill="#b8252d" filter="url(#rough)">
+ <circle cx="880" cy="190" r="10" fill-opacity=".85"/><circle cx="905" cy="215" r="4" fill-opacity=".8"/><circle cx="850" cy="230" r="5" fill-opacity=".7"/>
+ <circle cx="640" cy="330" r="7" fill-opacity=".8"/><circle cx="665" cy="355" r="3" fill-opacity=".7"/>
+ <path d="M700 290 q40 -30 85 -12 q-50 2 -85 12z" fill-opacity=".75"/><path d="M1000 120 q30 -22 60 -8 q-35 0 -60 8z" fill-opacity=".7"/>
+ <circle cx="460" cy="470" r="4" fill-opacity=".7"/><circle cx="1120" cy="90" r="3" fill-opacity=".7"/>
+</g>
+<rect width="1200" height="640" filter="url(#grain)" opacity=".6"/>
+</svg>

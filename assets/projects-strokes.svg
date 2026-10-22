@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700">
+<defs>
+ <filter id="dry"><feTurbulence type="fractalNoise" baseFrequency=".9 .02" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="14"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .12 0"/></filter>
+</defs>
+<g filter="url(#dry)" fill="#f2f0eb">
+ <path d="M-40 120 C120 60 260 110 420 40 L430 90 C280 150 130 110 -30 180z" opacity=".55"/>
+ <path d="M-60 330 C100 300 220 380 380 320 L390 350 C230 420 110 350 -50 380z" opacity=".35"/>
+ <path d="M-20 560 C140 520 240 600 460 540 L470 580 C250 650 150 570 -10 610z" opacity=".45"/>
+ <path d="M60 0 L120 700 L96 700 L30 0z" opacity=".25"/>
+</g>
+<g fill="#b8252d" fill-opacity=".75" filter="url(#dry)"><path d="M300 460 q40 -20 90 -5 q-50 8 -90 5z"/><circle cx="410" cy="440" r="4"/></g>
+<rect width="500" height="700" filter="url(#grain)" opacity=".6"/>
+</svg>

@@ -25,8 +25,9 @@ Open `config.js`. Every text, link, project, image and color is there.
 
 ## Art
 
-The character art currently in `assets/` is cropped from your mockup, so it's soft when large.
-Replace with higher-res grayscale PNGs (any size; they're masked and faded by CSS) and nothing else changes.
+`assets/*.svg` are original ink/manga layers (slash, lightning, halftone, brush strokes, torii) — vector, so they're sharp at any size.
+Want character art instead? Drop a PNG in `assets/` and point `images.hero.src` (etc.) at it; the masks and parallax apply to any image.
+After changing assets, bump `version` in `config.js` so visitors' browsers refetch them.
 
 ## Run locally
 

@@ -36,10 +36,10 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .row-2 > .section + .section { border-left: 1px solid var(--line); }
 
 /* art layers: independent images with masks/gradients, parallax via JS */
-.art { position: absolute; inset: -6% 0; z-index: 0; background-size: cover; background-position: center; filter: grayscale(1) contrast(1.05); opacity: 0; transition: opacity 1.2s var(--ease); will-change: transform; pointer-events: none; }
+.art { position: absolute; inset: -6% 0; z-index: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s var(--ease); will-change: transform; pointer-events: none; }
 .art-empty { opacity: 1; background: radial-gradient(ellipse at 70% 40%, rgba(255,255,255,.06), transparent 55%), radial-gradient(ellipse at 30% 90%, rgba(255,255,255,.04), transparent 50%); }
-.art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,14,.35), transparent 25%, transparent 75%, rgba(12,12,14,.5)), radial-gradient(circle, rgba(0,0,0,.38) .7px, transparent 1.1px) 0 0/3px 3px; } /* screentone */
-.art-hero { left: 44%; right: 4%; -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); mask-composite: intersect; background-position: center top; }
+.art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,14,.35), transparent 25%, transparent 75%, rgba(12,12,14,.5)); }
+.art-hero { left: 38%; right: 0; -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); mask-composite: intersect; background-position: center top; }
 .art-about { left: 44%; right: 18%; -webkit-mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); mask-composite: intersect; }
 .art-skills { left: 68%; -webkit-mask: linear-gradient(90deg, transparent, #000 45%); mask: linear-gradient(90deg, transparent, #000 45%); }
 .art-projects { right: 76%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); background-position: left center; }
@@ -92,7 +92,7 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .btn-primary:hover { background: rgba(200,50,58,.18); border-color: var(--accent); }
 .tagline { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-family: var(--sans); }
 .hero-insets { display: flex; flex-direction: column; gap: 10px; padding-top: 10px; }
-.inset { width: 118px; height: 76px; border: 1px solid rgba(255,255,255,.14); background: var(--surface) center/cover; filter: grayscale(1); position: relative; opacity: 1 !important; }
+.inset { width: 118px; height: 76px; border: 1px solid rgba(255,255,255,.14); background: var(--surface) center/cover; position: relative; opacity: 1 !important; }
 .inset.art-empty { background: linear-gradient(135deg, #1a1a1e, #0e0e11); }
 .inset.is-loaded { }
 

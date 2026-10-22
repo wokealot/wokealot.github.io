@@ -3,6 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
+  version: "3",                        // bump this whenever you change assets so browsers refetch them
   name: "WOKEALOT",
   siteTitle: "WOKEALOT — Fullstack Roblox Programmer",
   subtitle: "Fullstack Programmer",
@@ -63,14 +64,14 @@ window.SITE_CONFIG = {
   // Character art. Put your PNG/JPG files in /assets and set the paths.
   // Leave a path empty ("") and that layer is skipped (a subtle texture shows instead).
   images: {
-    hero:     { src: "assets/hero-chihiro.png",   opacity: 1,    parallax: 0.06 }, // right side of hero
-    heroInsetA: { src: "assets/hero-inset-eyes.jpg" },   // small framed panel next to the name
-    heroInsetB: { src: "assets/hero-inset-torii.jpg" },
-    about:    { src: "assets/about-killua.png",   opacity: 1,    parallax: 0.04 },
-    skills:   { src: "assets/skills-gon.png",     opacity: 0.8,  parallax: 0.03 },
-    projects: { src: "assets/projects-asta.png",  opacity: 0.9,  parallax: 0.03 },
-    contact:  { src: "assets/contact-luffy.png",  opacity: 0.85, parallax: 0.03 },
-    texture:  { src: "assets/texture.png", opacity: 0.18 }, // optional paper/brush texture tiled over everything
+    hero:     { src: "assets/hero-ink.svg",         opacity: 1,   parallax: 0.05 }, // right side of hero
+    heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
+    heroInsetB: { src: "assets/inset-torii.svg" },
+    about:    { src: "assets/about-lightning.svg",  opacity: 1,   parallax: 0.04 },
+    skills:   { src: "assets/skills-halftone.svg",  opacity: 1,   parallax: 0.03 },
+    projects: { src: "assets/projects-strokes.svg", opacity: 0.9, parallax: 0.03 },
+    contact:  { src: "assets/contact-torii.svg",    opacity: 0.9, parallax: 0.03 },
+    texture:  { src: "", opacity: 0.18 }, // optional paper/brush texture tiled over everything
   },
 
   // Japanese side-notes, exactly as in the mockup. Edit freely.

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+<defs>
+ <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="3" seed="2"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+ <radialGradient id="moon" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".7" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .12 0"/></filter>
+</defs>
+<circle cx="640" cy="150" r="110" fill="url(#moon)" opacity=".35"/>
+<rect width="900" height="400" fill="url(#mist)"/>
+<g filter="url(#rough)" fill="#e9e7e2" fill-opacity=".75">
+ <path d="M470 95 q170 -22 340 0 l0 22 q-170 -18 -340 0z"/>
+ <rect x="500" y="135" width="280" height="14"/>
+ <rect x="630" y="117" width="20" height="18"/>
+ <rect x="530" y="117" width="22" height="283" transform="skewX(-2)"/>
+ <rect x="730" y="117" width="22" height="283" transform="skewX(2)"/>
+</g>
+<g fill="#d9a3a8" fill-opacity=".55" filter="url(#rough)">
+ <path d="M120 60 q10 -12 18 0 q-6 10 -18 0z"/><path d="M220 140 q10 -12 18 0 q-6 10 -18 0z"/><path d="M340 60 q10 -12 18 0 q-6 10 -18 0z"/><path d="M60 230 q10 -12 18 0 q-6 10 -18 0z"/><path d="M300 300 q10 -12 18 0 q-6 10 -18 0z"/><path d="M420 200 q10 -12 18 0 q-6 10 -18 0z"/><path d="M820 300 q10 -12 18 0 q-6 10 -18 0z"/><path d="M860 80 q10 -12 18 0 q-6 10 -18 0z"/>
+</g>
+<rect width="900" height="400" filter="url(#grain)" opacity=".5"/>
+</svg>
