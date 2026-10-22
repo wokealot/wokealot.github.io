@@ -35,7 +35,7 @@
     const cfg = C.images[n.dataset.img];
     if (!cfg || !cfg.src) { n.classList.add("art-empty"); return; }
     const img = new Image();
-    img.onload = () => { n.style.backgroundImage = `url("${img.src}")`; n.style.opacity = cfg.opacity ?? 1; n.classList.add("is-loaded"); };
+    img.onload = () => { n.style.backgroundImage = `url("${img.src}")`; if (cfg.size) n.style.backgroundSize = cfg.size; if (cfg.position) n.style.backgroundPosition = cfg.position; n.style.opacity = cfg.opacity ?? 1; n.classList.add("is-loaded"); };
     img.onerror = () => n.classList.add("art-empty"); // missing file → texture fallback, no broken image
     img.src = cfg.src + "?v=" + (C.version || 0);
     if (cfg.parallax) artLayers.push({ n, f: cfg.parallax });
