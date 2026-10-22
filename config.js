@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792696845",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792697175",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -84,7 +84,7 @@ window.SITE_CONFIG = {
   // Side-notes: vertical kanji + a short list per section. Set list: [] to remove a list.
   jp: {
     hero:     { vertical: "開発者", quote: "「創造を現実に。」", list: ["Combat", "Skills", "UI", "VFX"] },
-    about:    { vertical: "進み続ける。", list: ["Luau", "Roblox Studio", "ProfileStore"] },
+    about:    { vertical: "進み続ける。", list: [] },
     projects: { vertical: "限界はない。", list: ["Click to play", "Filter by type", "More coming"] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
     contact:  { vertical: "", list: [] },   // corner is taken by the character
