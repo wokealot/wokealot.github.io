@@ -117,6 +117,8 @@
     $("#socialGrid").append(a);
   });
 
+  $("#year").textContent = new Date().getFullYear();
+
   // ---------- nav ----------
   const toggle = $(".nav-toggle"), links = $(".nav-links");
   toggle.addEventListener("click", () => { const o = links.classList.toggle("open"); toggle.setAttribute("aria-expanded", o); });

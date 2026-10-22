@@ -162,7 +162,7 @@ body.ready .hero-name::after { opacity: .55; transform: none; }
 .social-text strong { font: 500 13px var(--serif); }
 .social-text small { color: var(--muted); font-size: 9px; letter-spacing: .06em; text-transform: none; }
 .social-card .arrow { color: var(--muted); }
-.footer { padding: 18px 48px; color: var(--muted); font-size: 10px; }
+.footer { padding: 18px 48px; color: var(--muted); font-size: 10px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 /* ---------- modal / toast ---------- */
 .modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; }

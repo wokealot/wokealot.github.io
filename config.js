@@ -3,10 +3,11 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792697362",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792697395",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
+  copyright: "NLMB Productions",      // footer: © <year> <copyright>
   siteUrl: "https://wokealot.github.io/",   // used for share previews (Open Graph)   // browser tab title (keep short; tabs truncate)
   subtitle: "Fullstack Programmer",
   tagline: "Turning creative ideas into reality.",
