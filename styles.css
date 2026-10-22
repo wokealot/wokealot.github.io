@@ -4,7 +4,7 @@
   --ease: cubic-bezier(.2,.7,.2,1);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 54px; } /* sticky nav height */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
 body.ready main, body.ready .nav { opacity: 1; }
 main, .nav { opacity: 0; transition: opacity .6s var(--ease); }
