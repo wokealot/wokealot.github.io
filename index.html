@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>paidseason | Roblox Scripter</title>
+
+  <style>
+    :root {
+      --bg: #09090f;
+      --panel: #151520;
+      --text: #f4f4f8;
+      --muted: #9999ad;
+      --accent: #956bff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      border-bottom: 1px solid #252535;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--accent);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    section {
+      padding: 75px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero { padding-top: 110px; padding-bottom: 110px; }
+
+    .eyebrow { color: var(--accent); font-weight: bold; }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.1;
+      margin: 16px 0;
+    }
+
+    h2 { font-size: 32px; margin-bottom: 24px; }
+
+    p { color: var(--muted); }
+
+    .hero p { max-width: 600px; }
+
+    .btn {
+      display: inline-block;
+      margin: 20px 12px 0 0;
+      padding: 12px 22px;
+      background: var(--accent);
+      color: white;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .btn:hover { transform: translateY(-3px); opacity: .85; }
+
+    .secondary { background: #28283a; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #29293b;
+      padding: 25px;
+      border-radius: 14px;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .tag {
+      display: inline-block;
+      background: #29213e;
+      color: #c5afff;
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin: 4px 4px 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      border-top: 1px solid #252535;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 8px; }
+      section { padding: 55px 6%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">paidseason.dev</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">ROBLOX LUAU DEVELOPER</span>
+      <h1>Building interactive<br>Roblox experiences.</h1>
+      <p>
+        Hey, I'm paidseason, a Roblox scripter specializing
+        in combat systems, abilities, VFX, UI scripting,
+        and backend development.
+      </p>
+      <a class="btn" href="#projects">View My Work →</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I've been scripting on Roblox for almost a year.
+        I focus on creating polished gameplay mechanics,
+        optimized systems, and smooth player experiences.
+      </p>
+      <div>
+        <span class="tag">Luau</span>
+        <span class="tag">Combat Systems</span>
+        <span class="tag">Skills & Abilities</span>
+        <span class="tag">VFX</span>
+        <span class="tag">UI</span>
+        <span class="tag">ProfileStore</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Combat System</h3>
+          <p>
+            An expandable combat framework featuring
+            combos, animations, hitboxes, and effects.
+          </p>
+          <span class="tag">Luau</span>
+          <span class="tag">Combat</span>
+        </div>
+
+        <div class="card">
+          <h3>Skills & Abilities</h3>
+          <p>
+            Custom ability systems with cooldowns,
+            visual effects, and gameplay mechanics.
+          </p>
+          <span class="tag">Abilities</span>
+          <span class="tag">VFX</span>
+        </div>
+
+        <div class="card">
+          <h3>Backend Systems</h3>
+          <p>
+            Data saving, player progression, and
+            reusable server-side modules.
+          </p>
+          <span class="tag">Data</span>
+          <span class="tag">Modules</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Work Together</h2>
+      <p>
+        Interested in commissioning me or
+        collaborating on a Roblox project?
+      </p>
+      <a class="btn" href="https://discord.com/"
+         target="_blank" rel="noopener noreferrer">
+        Contact on Discord
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> paidseason.
+    Built with GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
