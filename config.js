@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792697175",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792697211",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -71,7 +71,7 @@ window.SITE_CONFIG = {
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right center" },
     contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" }, // Naruto
     projectsFigureB:{ src: "assets/projects-figure-b.png", opacity: .85, parallax: 0.02, size: "contain", position: "right bottom" }, // right side of Projects
-    projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
+    projectsFigure: { src: "assets/projects-figure.png", opacity: .9,  parallax: 0.02, size: "cover",   position: "65% center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
     heroInsetB: { src: "assets/inset-torii.svg" },
     about:    { src: "assets/about-lightning.svg",  opacity: 1,   parallax: 0.04 },
@@ -85,7 +85,7 @@ window.SITE_CONFIG = {
   jp: {
     hero:     { vertical: "開発者", quote: "「創造を現実に。」", list: ["Combat", "Skills", "UI", "VFX"] },
     about:    { vertical: "進み続ける。", list: [] },
-    projects: { vertical: "限界はない。", list: ["Click to play", "Filter by type", "More coming"] },
+    projects: { vertical: "限界はない。", list: [] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
     contact:  { vertical: "", list: [] },   // corner is taken by the character
   },
