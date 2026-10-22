@@ -3,19 +3,21 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "6",                        // bump this whenever you change assets so browsers refetch them
-  name: "WOKEALOT",
-  siteTitle: "WOKEALOT — Roblox Dev",   // browser tab title (keep short; tabs truncate)
+  version: "8",                        // bump this whenever you change assets so browsers refetch them
+  name: "TONI",                      // the big name everywhere (hero, nav, footer)
+  realName: "Toni (ant)",             // used in About; set "" to use `name`
+  siteTitle: "TONI — Roblox Dev",
+  siteUrl: "https://wokealot.github.io/",   // used for share previews (Open Graph)   // browser tab title (keep short; tabs truncate)
   subtitle: "Fullstack Programmer",
   kanjiLogo: "滝",                       // small kanji next to the nav logo
   tagline: "Turning creative ideas into reality.",
   commissionsOpen: true,                // shows "Open for commissions" in Contact
 
   heroIntro:
-    "I've been scripting on Roblox for almost a year, primarily specializing in Skills/Abilities, UI Scripting, VFX Scripting, and Combat Systems. I also have experience with backend, including Data/ProfileStore and other gameplay systems.",
+    "Scripting on Roblox for almost a year — Skills/Abilities, UI, VFX, and Combat Systems, with backend experience in Data/ProfileStore and other gameplay systems.",
 
   about:
-    "I'm a Roblox developer focused on creating engaging and high-quality systems. I enjoy turning creative ideas into functional and polished experiences, whether it's combat, abilities, UI, VFX, or backend systems.",
+    "I'm {realName} — a Roblox developer focused on creating engaging, high-quality systems. I enjoy turning creative ideas into functional and polished experiences, whether it's combat, abilities, UI, VFX, or backend systems like Data/ProfileStore.",
   aboutExtra:
     "If you need something that isn't listed, feel free to ask and I'll let you know if I can do it.",
 
@@ -23,7 +25,6 @@ window.SITE_CONFIG = {
   stats: [
     { value: "1+", label: "Year Experience" },
     { value: "auto", label: "Public Demos" },   // "auto" = number of projects
-    { value: "100%", label: "Passion" },
   ],
 
   skills: [
@@ -70,6 +71,7 @@ window.SITE_CONFIG = {
     aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right bottom" },
     contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" },
+    projectsFigureB:{ src: "assets/projects-figure-b.png", opacity: .85, parallax: 0.02, size: "contain", position: "right bottom" }, // right side of Projects
     projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
     heroInsetB: { src: "assets/inset-torii.svg" },
@@ -102,5 +104,7 @@ window.SITE_CONFIG = {
     enabled: true,          // master switch (also off when the OS asks for reduced motion)
     parallax: true,
     revealOnScroll: true,
+    hoverPreview: true,     // muted video preview when hovering a project card
+    scrollProgress: true,   // thin red line under the nav
   },
 };

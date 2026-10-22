@@ -25,7 +25,8 @@
   document.title = C.siteTitle;
 
   // ---------- text bindings ----------
-  document.querySelectorAll("[data-cfg]").forEach((n) => (n.textContent = C[n.dataset.cfg] ?? ""));
+  const fill = (t) => String(t ?? "").replace("{realName}", C.realName || C.name).replace("I'm  —", "I'm");
+  document.querySelectorAll("[data-cfg]").forEach((n) => (n.textContent = fill(C[n.dataset.cfg])));
   document.querySelectorAll("[data-jp]").forEach((n) => (n.textContent = get(n.dataset.jp) ?? ""));
   document.querySelectorAll("[data-jp-list]").forEach((n) => (get(n.dataset.jpList) || []).forEach((t) => n.append(el("li", null, t))));
 
@@ -67,7 +68,15 @@
         ${p.note ? `<span class="badge">${p.note}</span>` : ""}
       </button>
       <div class="card-meta"><h3>${p.title}</h3><span>${p.category}</span></div>`;
-    card.querySelector(".thumb").addEventListener("click", () => openVideo(id, p.title));
+    const thumb = card.querySelector(".thumb");
+    thumb.addEventListener("click", () => openVideo(id, p.title));
+    if (!reduced && C.animations.hoverPreview && matchMedia("(hover: hover)").matches) {
+      let t;
+      thumb.addEventListener("mouseenter", () => { t = setTimeout(() => {
+        const f = el("iframe", "preview"); f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&rel=0&playsinline=1`; f.tabIndex = -1; f.setAttribute("aria-hidden", "true"); thumb.append(f);
+      }, 500); });
+      thumb.addEventListener("mouseleave", () => { clearTimeout(t); thumb.querySelector(".preview")?.remove(); });
+    }
     grid.append(card);
   });
 
@@ -115,6 +124,13 @@
   const spy = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting &&
     links.querySelectorAll("a").forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + e.target.id))), { rootMargin: "-40% 0px -55% 0px" });
   document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
+
+  // ---------- scroll progress / font-ready fade ----------
+  const bar = $("#progress");
+  if (C.animations.scrollProgress && bar) addEventListener("scroll", () => { const d = document.documentElement; bar.style.transform = `scaleX(${scrollY / (d.scrollHeight - innerHeight)})`; }, { passive: true });
+  else bar?.remove();
+  (document.fonts?.ready || Promise.resolve()).then(() => document.body.classList.add("ready"));
+  setTimeout(() => document.body.classList.add("ready"), 1500); // never hold the page hostage to a font
 
   // ---------- motion ----------
   if (reduced || !C.animations.revealOnScroll) document.querySelectorAll(".reveal").forEach((n) => n.classList.add("in"));

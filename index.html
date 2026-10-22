@@ -3,25 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WOKEALOT</title>
-  <meta name="description" content="Fullstack Roblox programmer — combat, skills, UI, VFX and backend systems.">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=6">
+  <title>TONI</title>
+  <meta name="description" content="TONI (wokealot) — Fullstack Roblox programmer. Combat systems, skills/abilities, UI, VFX and backend (Data/ProfileStore).">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TONI — Roblox Dev">
+  <meta property="og:description" content="Fullstack Roblox programmer — combat systems, skills, UI, VFX and backend.">
+  <meta property="og:url" content="https://wokealot.github.io/">
+  <meta property="og:image" content="https://wokealot.github.io/assets/og.png?v=8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://wokealot.github.io/assets/og.png?v=8">
+  <link rel="preload" as="image" href="assets/hero-figure.png?v=8">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
   <div class="texture" aria-hidden="true"></div>
 
-  <header class="nav">
+  <header class="nav"><span class="progress" id="progress"></span>
     <a class="brand" href="#home"><span class="brand-kanji" data-cfg="kanjiLogo"></span><span class="brand-name" data-cfg="name"></span></a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav-links">
       <a href="#home" class="is-active">Home</a>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-social" id="navSocial"></div>
@@ -86,6 +94,7 @@
     <section id="projects" class="projects section">
       <div class="art art-projects" data-img="projects"></div>
         <div class="art art-figure art-figure-projects" data-img="projectsFigure"></div>
+      <div class="art art-figure art-figure-projects-b" data-img="projectsFigureB"></div>
       <aside class="side-note side-note-projects">
         <span class="jp-vertical" data-jp="projects.vertical"></span>
         <ul class="jp-list" data-jp-list="projects.list"></ul>
@@ -130,7 +139,7 @@
   </div>
   <div class="toast" id="toast" role="status"></div>
 
-  <script src="config.js?v=6"></script>
-  <script src="app.js?v=6"></script>
+  <script src="config.js?v=8"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
