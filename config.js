@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "4",                        // bump this whenever you change assets so browsers refetch them
+  version: "5",                        // bump this whenever you change assets so browsers refetch them
   name: "WOKEALOT",
   siteTitle: "WOKEALOT — Fullstack Roblox Programmer",
   subtitle: "Fullstack Programmer",
@@ -65,7 +65,10 @@ window.SITE_CONFIG = {
   // Leave a path empty ("") and that layer is skipped (a subtle texture shows instead).
   images: {
     hero:     { src: "assets/hero-ink.svg",         opacity: 1,   parallax: 0.05 }, // right side of hero
-    heroFigure: { src: "assets/hero-figure.png", opacity: 1, parallax: 0.03, size: "contain", position: "right bottom" }, // character over the hero art
+    heroFigure:     { src: "assets/hero-figure.png",     opacity: 1,   parallax: 0.03, size: "contain", position: "right bottom" }, // characters sit over the ink layers
+    aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
+    skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right bottom" },
+    projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
     heroInsetB: { src: "assets/inset-torii.svg" },
     about:    { src: "assets/about-lightning.svg",  opacity: 1,   parallax: 0.04 },
