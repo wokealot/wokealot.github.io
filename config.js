@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792708224",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792708287",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -58,6 +58,7 @@ window.SITE_CONFIG = {
   reviewFormUrl: "",   // paste a Tally/Google Form link here to show a "Leave a review" button
 
   paymentLine: "USD preferred · Robux accepted · Upfront or 50/50 · PayPal, Cash App, Venmo, Roblox group funds or gamepass",   // one line under Contact; "" hides it
+  contactLine: "Discord is the fastest way to reach me — I'm on there most of the day.",
   discordUsername: "wokealot",   // "copy" button, no profile URL
   brandColors: true,             // platform colors on the contact icons (false = all white)
   // ids: x, youtube, discord, roblox, github

@@ -114,7 +114,7 @@
   if (C.reviewFormUrl) { const f = $("#reviewForm"); f.href = C.reviewFormUrl; f.hidden = false; $("#reviews").hidden = false; }
 
   // ---------- contact ----------
-  $("#contactLine").textContent = (C.commissionsOpen ? "Open for commissions. " : "") + "Feel free to reach out through any of my socials.";
+  $("#contactLine").textContent = (C.commissionsOpen ? "Open for commissions. " : "") + (C.contactLine || "Feel free to reach out through any of my socials.");
   $("#payLine").textContent = C.paymentLine || "";
   const toast = $("#toast");
   C.socials.forEach((s) => {
