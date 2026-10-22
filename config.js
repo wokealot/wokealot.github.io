@@ -3,13 +3,12 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "8",                        // bump this whenever you change assets so browsers refetch them
+  version: "10",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
   siteUrl: "https://wokealot.github.io/",   // used for share previews (Open Graph)   // browser tab title (keep short; tabs truncate)
   subtitle: "Fullstack Programmer",
-  kanjiLogo: "滝",                       // small kanji next to the nav logo
   tagline: "Turning creative ideas into reality.",
   commissionsOpen: true,                // shows "Open for commissions" in Contact
 
@@ -55,12 +54,12 @@ window.SITE_CONFIG = {
   discordUsername: "wokealot",   // "copy" button, no profile URL
   brandColors: true,             // platform colors on the contact icons (false = all white)
   // ids: x, youtube, discord, roblox, github
-  socials: [
+  socials: [   // order here = order in nav and Contact
     { id: "x",       label: "Twitter",          sub: "@wokealot",    url: "https://x.com/wokealot" },
-    { id: "youtube", label: "YouTube",          sub: "@cncerned",    url: "https://www.youtube.com/@cncerned" },
-    { id: "discord", label: "Discord",          sub: "wokealot",     copy: true },
     { id: "discord", label: "Portfolio Server", sub: "Join Now",     url: "https://discord.gg/SwsYwQKCca" },
+    { id: "discord", label: "Discord",          sub: "wokealot",     copy: true },
     { id: "roblox",  label: "Roblox",           sub: "View Profile", url: "https://www.roblox.com/users/11074309439/profile" },
+    { id: "youtube", label: "YouTube",          sub: "@cncerned",    url: "https://www.youtube.com/@cncerned" },
   ],
 
   // Character art. Put your PNG/JPG files in /assets and set the paths.
@@ -70,7 +69,7 @@ window.SITE_CONFIG = {
     heroFigure:     { src: "assets/hero-figure.png",     opacity: 1,   parallax: 0.03, size: "contain", position: "right bottom" }, // characters sit over the ink layers
     aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right bottom" },
-    contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" },
+    contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" }, // Itachi (crouching)
     projectsFigureB:{ src: "assets/projects-figure-b.png", opacity: .85, parallax: 0.02, size: "contain", position: "right bottom" }, // right side of Projects
     projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
@@ -82,13 +81,13 @@ window.SITE_CONFIG = {
     texture:  { src: "", opacity: 0.18 }, // optional paper/brush texture tiled over everything
   },
 
-  // Japanese side-notes, exactly as in the mockup. Edit freely.
+  // Side-notes: vertical kanji + a short list per section. Set list: [] to remove a list.
   jp: {
-    hero:     { vertical: "開発者", quote: "「創造を現実に。」", list: ["Create", "Develop", "Design", "Bring to life"] },
-    about:    { vertical: "進み続ける。", list: ["Discipline", "Creativity", "Progress", "Better systems"] },
-    projects: { vertical: "限界はない。", list: ["More ideas", "More systems", "More to come"] },
+    hero:     { vertical: "開発者", quote: "「創造を現実に。」", list: ["Combat", "Skills", "UI", "VFX"] },
+    about:    { vertical: "進み続ける。", list: ["Luau", "Roblox Studio", "ProfileStore"] },
+    projects: { vertical: "限界はない。", list: ["Click to play", "Filter by type", "More coming"] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
-    contact:  { vertical: "楽しもう。", list: ["Same passion.", "Different ideas.", "Bigger systems."] },
+    contact:  { vertical: "楽しもう。", list: ["Open for commissions", "Discord preferred", "EST timezone"] },
   },
 
   colors: {

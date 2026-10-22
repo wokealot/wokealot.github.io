@@ -45,7 +45,7 @@
 
   // ---------- nav socials ----------
   const linkSocials = C.socials.filter((s) => s.url);
-  linkSocials.forEach((s) => { const a = el("a", "icon-btn", ICONS[s.id]); a.href = s.url; a.target = "_blank"; a.rel = "noopener"; a.setAttribute("aria-label", s.label); $("#navSocial").append(a); });
+  linkSocials.forEach((s) => { const a = el("a", "icon-btn" + (C.brandColors ? " brand-" + s.id : ""), ICONS[s.id]); a.href = s.url; a.target = "_blank"; a.rel = "noopener"; a.setAttribute("aria-label", s.label); $("#navSocial").append(a); });
 
   // ---------- stats ----------
   C.stats.forEach((s) => $("#stats").append(el("div", "stat", `<strong>${s.value === "auto" ? C.projects.length : s.value}</strong><span>${s.label}</span>`)));
@@ -138,7 +138,7 @@
 
   if (!reduced && C.animations.parallax && artLayers.length) {
     let ticking = false;
-    const run = () => { artLayers.forEach(({ n, f }) => { const r = n.parentElement.getBoundingClientRect(); n.style.transform = `translate3d(0,${(r.top - innerHeight / 2) * -f}px,0)`; }); ticking = false; };
+    const run = () => { artLayers.forEach(({ n, f }) => { const r = n.parentElement.getBoundingClientRect(); if (r.bottom < -200 || r.top > innerHeight + 200) return; n.style.transform = `translate3d(0,${Math.round((r.top - innerHeight / 2) * -f)}px,0)`; }); ticking = false; };
     addEventListener("scroll", () => { if (!ticking) { requestAnimationFrame(run); ticking = true; } }, { passive: true }); run();
   }
 })();
