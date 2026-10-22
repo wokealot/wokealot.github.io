@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "1792698031",                        // bump this whenever you change assets so browsers refetch them
+  version: "1792698577",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -52,6 +52,28 @@ window.SITE_CONFIG = {
     { title: "Slot Selection",                 youtube: "https://youtu.be/7K9BTRlawbs", category: "UI" },
   ],
 
+  commissions: {
+    intro: "I take on anything within my expertise — if it's on the skills list, I can build it. Not sure? Ask.",
+    takes: ["Combat systems", "Skills / abilities / movesets", "UI scripting", "VFX scripting", "Data / ProfileStore", "Other backend & gameplay systems"],
+    pricing: [
+      "Quoted per job based on scope",
+      "USD preferred · Robux accepted",
+      "Upfront, or 50% to start / 50% on delivery",
+    ],
+    methods: ["PayPal", "Cash App", "Venmo", "Roblox group funds", "Roblox T-shirt / gamepass"],
+    steps: [
+      { t: "DM me", d: "Discord (wokealot) or the portfolio server with what you need." },
+      { t: "Scope & quote", d: "We go over details, I send a price and a rough timeline." },
+      { t: "Payment", d: "Upfront or 50/50 — then I start." },
+      { t: "Build & deliver", d: "Progress updates as I go, final delivery when it's done." },
+    ],
+  },
+
+  // Reviews from real clients. Section is hidden until this has at least one entry.
+  // Add one: { name: "Client", handle: "@discord", project: "Combat system", stars: 5, text: "…", date: "Oct 2026" }
+  reviews: [],
+  reviewFormUrl: "",   // paste a Tally/Google Form link here to show a "Leave a review" button
+
   discordUsername: "wokealot",   // "copy" button, no profile URL
   brandColors: true,             // platform colors on the contact icons (false = all white)
   // ids: x, youtube, discord, roblox, github
@@ -89,6 +111,8 @@ window.SITE_CONFIG = {
     projects: { vertical: "限界はない。", list: [] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
     contact:  { vertical: "", list: [] },   // corner is taken by the character
+    commissions: { vertical: "依頼。", list: [] },
+    reviews:  { vertical: "信頼。", list: [] },
   },
 
   colors: {

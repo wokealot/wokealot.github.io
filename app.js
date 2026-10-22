@@ -103,6 +103,24 @@
   modal.querySelectorAll("[data-close]").forEach((n) => n.addEventListener("click", closeVideo));
   addEventListener("keydown", (e) => e.key === "Escape" && !modal.hidden && closeVideo());
 
+  // ---------- commissions ----------
+  const K = C.commissions || {};
+  $("[data-cfg-path='commissions.intro']").textContent = K.intro || "";
+  (K.takes || []).forEach((t) => $("#commTakes").append(el("li", null, t)));
+  (K.pricing || []).forEach((t) => $("#commPricing").append(el("li", null, t)));
+  (K.methods || []).forEach((t) => $("#commMethods").append(el("span", "chip chip-static", t)));
+  (K.steps || []).forEach((s) => $("#commSteps").append(el("li", null, `<strong>${s.t}</strong><span>${s.d}</span>`)));
+
+  // ---------- reviews ----------
+  if ((C.reviews || []).length) {
+    $("#reviews").hidden = false;
+    C.reviews.forEach((r) => $("#reviewGrid").append(el("article", "review reveal",
+      `<div class="stars" aria-label="${r.stars} out of 5">${"★".repeat(r.stars || 5)}${"☆".repeat(5 - (r.stars || 5))}</div>
+       <p>“${r.text}”</p>
+       <footer><strong>${r.name}</strong>${r.handle ? ` <span>${r.handle}</span>` : ""}${r.project ? ` · ${r.project}` : ""}${r.date ? ` · ${r.date}` : ""}</footer>`)));
+  }
+  if (C.reviewFormUrl) { const f = $("#reviewForm"); f.href = C.reviewFormUrl; f.hidden = false; $("#reviews").hidden = false; }
+
   // ---------- contact ----------
   $("#contactLine").textContent = (C.commissionsOpen ? "Open for commissions. " : "") + "Feel free to reach out through any of my socials.";
   const toast = $("#toast");
