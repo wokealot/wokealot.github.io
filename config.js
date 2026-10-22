@@ -3,9 +3,9 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "5",                        // bump this whenever you change assets so browsers refetch them
+  version: "6",                        // bump this whenever you change assets so browsers refetch them
   name: "WOKEALOT",
-  siteTitle: "WOKEALOT — Fullstack Roblox Programmer",
+  siteTitle: "WOKEALOT — Roblox Dev",   // browser tab title (keep short; tabs truncate)
   subtitle: "Fullstack Programmer",
   kanjiLogo: "滝",                       // small kanji next to the nav logo
   tagline: "Turning creative ideas into reality.",
@@ -52,13 +52,14 @@ window.SITE_CONFIG = {
   ],
 
   discordUsername: "wokealot",   // "copy" button, no profile URL
+  brandColors: true,             // platform colors on the contact icons (false = all white)
+  // ids: x, youtube, discord, roblox, github
   socials: [
     { id: "x",       label: "Twitter",          sub: "@wokealot",    url: "https://x.com/wokealot" },
     { id: "youtube", label: "YouTube",          sub: "@cncerned",    url: "https://www.youtube.com/@cncerned" },
     { id: "discord", label: "Discord",          sub: "wokealot",     copy: true },
     { id: "discord", label: "Portfolio Server", sub: "Join Now",     url: "https://discord.gg/SwsYwQKCca" },
     { id: "roblox",  label: "Roblox",           sub: "View Profile", url: "https://www.roblox.com/users/11074309439/profile" },
-    { id: "github",  label: "GitHub",           sub: "wokealot",     url: "https://github.com/wokealot" },
   ],
 
   // Character art. Put your PNG/JPG files in /assets and set the paths.
@@ -68,6 +69,7 @@ window.SITE_CONFIG = {
     heroFigure:     { src: "assets/hero-figure.png",     opacity: 1,   parallax: 0.03, size: "contain", position: "right bottom" }, // characters sit over the ink layers
     aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right bottom" },
+    contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" },
     projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
     heroInsetB: { src: "assets/inset-torii.svg" },

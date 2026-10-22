@@ -42,9 +42,10 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .art-hero { left: 34%; right: 0; -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 18%, #000 88%, transparent), linear-gradient(180deg, transparent, #000 22%, #000 80%, transparent); mask-composite: intersect; background-position: center top; }
 .art-figure { top: 6%; bottom: 0; left: 52%; right: 13%; background-repeat: no-repeat; z-index: 1; -webkit-mask: linear-gradient(180deg, #000 70%, transparent); mask: linear-gradient(180deg, #000 70%, transparent); filter: drop-shadow(0 0 30px rgba(0,0,0,.9)); }
 .art-figure::after { display: none; }
-.art-figure-about { top: 4%; bottom: 0; left: 40%; right: 16%; -webkit-mask: linear-gradient(180deg, #000 70%, transparent); mask: linear-gradient(180deg, #000 70%, transparent); }
-.art-figure-skills { top: 22%; bottom: -8%; left: 56%; right: -14%; -webkit-mask: linear-gradient(90deg, transparent, #000 35%); mask: linear-gradient(90deg, transparent, #000 35%); }
-.art-figure-projects { top: 4%; bottom: 4%; left: 0; right: 68%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); }
+.art-figure-about { top: 12%; bottom: 6%; left: 42%; right: 18%; -webkit-mask: linear-gradient(180deg, #000 55%, transparent 92%); mask: linear-gradient(180deg, #000 55%, transparent 92%); }
+.art-figure-skills { top: 34%; bottom: 0; left: 62%; right: 0; -webkit-mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); mask-composite: intersect; }
+.art-figure-projects { top: 6%; bottom: 6%; left: 0; right: 70%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); }
+.art-figure-contact { top: -4%; bottom: 0; left: 64%; right: 14%; -webkit-mask: linear-gradient(180deg, #000 60%, transparent); mask: linear-gradient(180deg, #000 60%, transparent); }
 .art-about { left: 44%; right: 18%; -webkit-mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); mask-composite: intersect; }
 .art-skills { left: 68%; -webkit-mask: linear-gradient(90deg, transparent, #000 45%); mask: linear-gradient(90deg, transparent, #000 45%); }
 .art-projects { right: 76%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); background-position: left center; }
@@ -144,10 +145,11 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .contact { padding: 36px 220px 44px 100px; }
 .contact-body h3 { font: 500 20px var(--serif); margin-bottom: 4px; }
 .contact-body .muted { font-size: 13px; margin-bottom: 18px; }
-.social-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 .social-card { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); background: rgba(20,20,23,.85); text-align: left; transition: border-color .35s, transform .35s var(--ease), background .35s; }
 .social-card:hover { border-color: rgba(255,255,255,.3); transform: translateY(-3px); background: rgba(28,28,32,.95); }
 .social-icon { font-size: 18px; }
+.brand-x .social-icon { color: #fff; } .brand-youtube .social-icon { color: #e0343a; } .brand-discord .social-icon { color: #7a8cf0; } .brand-roblox .social-icon { color: #d4d4d4; } .brand-github .social-icon { color: #fff; }
 .social-text { display: flex; flex-direction: column; line-height: 1.3; flex: 1; min-width: 0; }
 .social-text strong { font: 500 13px var(--serif); }
 .social-text small { color: var(--muted); font-size: 9px; letter-spacing: .06em; text-transform: none; }

@@ -98,7 +98,7 @@
   $("#contactLine").textContent = (C.commissionsOpen ? "Open for commissions. " : "") + "Feel free to reach out through any of my socials.";
   const toast = $("#toast");
   C.socials.forEach((s) => {
-    const a = el(s.copy ? "button" : "a", "social-card", `<span class="social-icon">${ICONS[s.id]}</span><span class="social-text"><strong>${s.label}</strong><small>${s.sub}</small></span><span class="arrow">→</span>`);
+    const a = el(s.copy ? "button" : "a", "social-card" + (C.brandColors ? " brand-" + s.id : ""), `<span class="social-icon">${ICONS[s.id]}</span><span class="social-text"><strong>${s.label}</strong><small>${s.sub}</small></span><span class="arrow">→</span>`);
     if (s.copy) a.addEventListener("click", async () => {
       try { await navigator.clipboard.writeText(C.discordUsername); toast.textContent = `Copied "${C.discordUsername}"`; }
       catch { toast.textContent = `Discord: ${C.discordUsername}`; }
