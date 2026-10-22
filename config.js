@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "10",                        // bump this whenever you change assets so browsers refetch them
+  version: "11",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -16,7 +16,7 @@ window.SITE_CONFIG = {
     "Scripting on Roblox for almost a year — Skills/Abilities, UI, VFX, and Combat Systems, with backend experience in Data/ProfileStore and other gameplay systems.",
 
   about:
-    "I'm {realName} — a Roblox developer focused on creating engaging, high-quality systems. I enjoy turning creative ideas into functional and polished experiences, whether it's combat, abilities, UI, VFX, or backend systems like Data/ProfileStore.",
+    "I'm {realName}. I've been scripting on Roblox for almost a year, mainly doing Skills/Abilities, UI, VFX, and Combat Systems. I also have backend experience — Data/ProfileStore and other gameplay systems.",
   aboutExtra:
     "If you need something that isn't listed, feel free to ask and I'll let you know if I can do it.",
 
