@@ -48,7 +48,7 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .art-figure-skills { top: 34%; bottom: 0; left: 62%; right: 0; -webkit-mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); mask-composite: intersect; }
 .art-figure-projects { top: 6%; bottom: 6%; left: 0; right: 70%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); }
 .art-figure-projects-b { top: 10%; bottom: 0; left: 80%; right: -4%; -webkit-mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 30%), linear-gradient(180deg, #000 60%, transparent); mask-composite: intersect; }
-.art-figure-contact { top: -2%; bottom: 0; left: 64%; right: 10%; -webkit-mask: linear-gradient(180deg, #000 60%, transparent); mask: linear-gradient(180deg, #000 60%, transparent); }
+.art-figure-contact { top: 0; bottom: 0; left: 70%; right: 0; -webkit-mask: linear-gradient(180deg, #000 60%, transparent); mask: linear-gradient(180deg, #000 60%, transparent); }
 .art-about { left: 44%; right: 18%; -webkit-mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); -webkit-mask-composite: source-in; mask: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent), linear-gradient(180deg, transparent, #000 20%, #000 80%, transparent); mask-composite: intersect; }
 .art-skills { left: 68%; -webkit-mask: linear-gradient(90deg, transparent, #000 45%); mask: linear-gradient(90deg, transparent, #000 45%); }
 .art-projects { right: 76%; -webkit-mask: linear-gradient(90deg, #000 55%, transparent); mask: linear-gradient(90deg, #000 55%, transparent); background-position: left center; }
@@ -66,7 +66,7 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
 .side-note-hero { right: 48px; top: 110px; }
 .side-note-about { right: 60px; top: 90px; }
 .side-note-projects { left: 48px; top: 140px; text-align: left; }
-.side-note-contact { right: 48px; top: 40px; }
+.side-note-contact { right: 48px; top: 32px; }
 
 /* ---------- nav ---------- */
 .progress { position: absolute; left: 0; bottom: -1px; height: 1px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
@@ -148,7 +148,7 @@ body.ready .hero-name::after { opacity: .55; transform: none; }
 .card.reveal { transition-delay: calc(var(--i) * 60ms); }
 
 /* ---------- contact ---------- */
-.contact { padding: 36px 220px 44px 100px; min-height: 330px; }
+.contact { padding: 36px 360px 44px 100px; min-height: 360px; }
 .contact-body h3 { font: 500 20px var(--serif); margin-bottom: 4px; }
 .contact-body .muted { font-size: 13px; margin-bottom: 18px; }
 .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }

@@ -3,7 +3,7 @@
 //  Change text, links, projects, images, colors here.
 // ============================================================
 window.SITE_CONFIG = {
-  version: "11",                        // bump this whenever you change assets so browsers refetch them
+  version: "12",                        // bump this whenever you change assets so browsers refetch them
   name: "TONI",                      // the big name everywhere (hero, nav, footer)
   realName: "Toni (ant)",             // used in About; set "" to use `name`
   siteTitle: "TONI — Roblox Dev",
@@ -69,7 +69,7 @@ window.SITE_CONFIG = {
     heroFigure:     { src: "assets/hero-figure.png",     opacity: 1,   parallax: 0.03, size: "contain", position: "right bottom" }, // characters sit over the ink layers
     aboutFigure:    { src: "assets/about-figure.png",    opacity: .95, parallax: 0.03, size: "contain", position: "center bottom" },
     skillsFigure:   { src: "assets/skills-figure.png",   opacity: .8,  parallax: 0.02, size: "contain", position: "right bottom" },
-    contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" }, // Itachi (crouching)
+    contactFigure:  { src: "assets/contact-figure.png",  opacity: .9,  parallax: 0.02, size: "contain", position: "right bottom" }, // Naruto
     projectsFigureB:{ src: "assets/projects-figure-b.png", opacity: .85, parallax: 0.02, size: "contain", position: "right bottom" }, // right side of Projects
     projectsFigure: { src: "assets/projects-figure.png", opacity: .85, parallax: 0.02, size: "contain", position: "left center" },
     heroInsetA: { src: "assets/inset-eye.svg" },     // small framed panels next to the name
@@ -87,7 +87,7 @@ window.SITE_CONFIG = {
     about:    { vertical: "進み続ける。", list: ["Luau", "Roblox Studio", "ProfileStore"] },
     projects: { vertical: "限界はない。", list: ["Click to play", "Filter by type", "More coming"] },
     skills:   { quote: "\"Ideas → Systems → Experiences.\"" },
-    contact:  { vertical: "楽しもう。", list: ["Open for commissions", "Discord preferred", "EST timezone"] },
+    contact:  { vertical: "", list: [] },   // corner is taken by the character
   },
 
   colors: {
