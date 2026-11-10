@@ -41,6 +41,7 @@ window.SITE_CONFIG = {
 
   // Add a demo = add one object. Thumbnail is pulled from YouTube automatically.
   projects: [
+    { title: "Fancy Slash",                    youtube: "https://youtu.be/RCmkGsg7xjQ", category: "Abilities" },
     { title: "Battleground Combat System",     youtube: "https://youtu.be/W8ymF6NWyX0", category: "Combat" },
     { title: "Unfinished Sword Combat System", youtube: "https://youtu.be/OmiSr5dz04k", category: "Combat",    note: "Unfinished / WIP" },
     { title: "Choso Piercing Blood",           youtube: "https://youtu.be/r_GAHlbXXkU", category: "Abilities" },
